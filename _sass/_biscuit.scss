@@ -30,6 +30,20 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+#footer a {
+  color: #808080; /* From http://clrs.cc */
+  text-decoration: none;
+}
+
+#footer a:hover, a:focus {
+  text-decoration: underline;
+}
+
+small {
+  color: #B0B0B0;
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
