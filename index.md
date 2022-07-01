@@ -19,7 +19,7 @@ If you prefer to use Github Pages, you do not need to download it, upload files 
 * `_config.yml`            : Main configuration file.
 * `index.md`               : Website page (for now, this page).
 * `_includes/head.html`    : File to add custom code to `<head>` section.
-* `_includes/scripts.html` : File to add custom code before `</body>`.
+* `_includes/scripts.html` : File to add custom code before `</body>`. You can change footer at here.
 * `_sass` folder           : Related scss files can be found at this folder.
 * `css/main.csss`          : Main scss file.
 * `README.md`              : A simple readme file.
