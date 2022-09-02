@@ -1,8 +1,8 @@
 # Site settings
-title: Biscuit Theme for Jekyll
-tag_text: Biscuit
-description: Biscuit is a single-page responsive Jekyll theme. This is the most simple and still-good-looking Jekyll theme that you can find.
-# baseurl: "/blog" # the subpath of your site, e.g. /blog
+title: Zero Track Online
+tag_text: ZTO
+description: Pour un web 100% RGPD 
+# baseurl: "/biscuit" # the subpath of your site, e.g. /blog
 # url: "https://example.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 plugins:
