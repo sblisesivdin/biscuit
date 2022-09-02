@@ -2,45 +2,22 @@
 layout: default
 ---
 
-![Banner](assets/biscuit.png)
+**Zero Track Online** est une association à but non lucratif dont l'objectif est de contribuer au respect de la vie privée des internautes européens ou utilisant des services depuis l'UE.
 
+À cette fin nous intervenons :
+- en sensibilisant particuliers, professionnels, associations et acteurs publics
+- en portant en justice le recours à des solutions et pratiques contraires à la réglementation sur la protection des données personnelles
+- en promouvant des alternatives respectueuses de la vie privée et souveraine
 
-**[Biscuit](http://sblisesivdin.github.io/biscuit)** is a single-page responsive Jekyll theme. This is the most simple and still-good-looking Jekyll theme that you can find. 
+Nos actions en cours ou à venir :
+- septembre & octobre 2022 : détection et signalement à la CNIL des sites internet français recourant à la solution de mesure d'audience Google Analytics
+- novembre & décembre 2022 : détection et signalement à la CNIL des sites internet français recourant à la solution de détection de robots Google reCaptcha
+- janvier & février 2022 : détection et signalement à la CNIL des sites internet français recourant aux outils mis à disposition par Facebook et Twitter (ex: fil twitter, bouton j'aime...)
 
-## Usage
+L'association a été fondée en juillet 2022 par Malik SALEM (juriste) et Adriane SENOUCI (consultante en protection des données et cybersécurité). Nous sommes partis du constat que malgré la multiplication des décisions de justice et des publications de la CNIL peu d'entreprises, associations et organismes publics ont opté pour un basculement vers des solutions respectueuses de la vie privée. Notre objectif est d'amener le web français et européen à se transformer en bulle protectrice pour les données personnelles des clients, usagers ou bénéficiaires.
 
-You can use this theme with [Jekyll](http://jekyllrb.com/) or you can simply use it with [Github Pages](https://pages.github.com).
-For local usage just download [Jekyll](http://jekyllrb.com/), use installation guide for more. You can download latest Biscuit from [its Github repository](https://github.com/sblisesivdin/biscuit).
+Notre site est en cours de construction, vous trouverez bientôt des publications, analyses et guides de bonnes pratiques.
 
-If you prefer to use Github Pages, you do not need to download it, upload files to a new repository...etc., just [fork](https://docs.github.com/en/get-starter/quickstart/fork-a-repo) and use it.
-
-### Files
-
-* `_config.yml`            : Main configuration file.
-* `index.md`               : Website page (for now, this page).
-* `_includes/head.html`    : File to add custom code to `<head>` section.
-* `_includes/scripts.html` : File to add custom code before `</body>`. You can change footer at here.
-* `_sass` folder           : Related scss files can be found at this folder.
-* `css/main.csss`          : Main scss file.
-* `README.md`              : A simple readme file.
-
-## Example tag usage
-
-## Header 1
-### Header 2
-#### Header 3
-**bold**
-*italic*
-
-> blockquotes
-
-~~~python
-import os,time
-print ("Biscuit")
-~~~
-
-## Licence and Author Information
-
-Biscuit is derived from currently deprecated theme [Solo](http://github.com/chibicode/solo). The development of Biscuit is maintained by [Sefer Bora Lisesivdin](https://lrgresearch.org/bora).
-
-Biscuit and the previous code where Biscuit is derived are distributed with [MIT license](https://github.com/sblisesivdin/biscuit/blob/gh-pages/LICENSE).
+**Zero Track Online**, association en cours de déclaration
+Directeur de publication : Malik SALEM
+Ce site n'utilise aucun traceur.
