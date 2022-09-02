@@ -3,7 +3,7 @@ title: Zero Track Online
 tag_text: ZTO
 description: Pour un web 100% RGPD 
 # baseurl: "/biscuit" # the subpath of your site, e.g. /blog
-# url: "https://example.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://assozerotrack.online" # the base hostname & protocol for your site, e.g. http://example.com
 
 plugins:
   - jekyll-seo-tag
