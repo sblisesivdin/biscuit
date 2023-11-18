@@ -38,3 +38,17 @@ available data.
 
 As we can see, ratings are almost normally distributed. Additionally, higher spread in ratings also comes from the
 recent decades.
+
+### 2.2. Genre analysis
+
+As our work will highly depend on the genres, let's take a look which are the most common and/or most rated.
+
+{% include genre_ana/no_movie_genres.html %}
+
+It turns out the most of the movies have 1-5 genres, but there might be as many as 17.
+
+{% include genre_ana/no_movie_genres_bar.html %}
+
+{% include genre_ana/rating_by_genre.html %}
+
+As can be seen from the chart, there are no clear patterns regarding the rating and the genre, which is as expected.
