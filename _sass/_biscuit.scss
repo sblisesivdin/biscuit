@@ -47,7 +47,8 @@ small {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  margin: 0 0 0.5rem -0.1rem /* align left edge */;
+  margin: 0 0 0.5rem -0.1rem /* align left edge */
+;
   line-height: 1;
   color: #111;
   text-rendering: optimizeLegibility;
@@ -168,8 +169,10 @@ pre > code {
 }
 
 .container {
-  max-width: 30rem;
+  min-width: 40rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 0 1rem;
+  text-align: justify;
 }
 

@@ -4,43 +4,37 @@ layout: default
 
 ![Banner](assets/biscuit.png)
 
+# “Creative breakthroughs occur, when worlds collide”
 
-**[Biscuit](http://sblisesivdin.github.io/biscuit)** is a single-page responsive Jekyll theme. This is the most simple and still-good-looking Jekyll theme that you can find. 
+*Thai-Nam Hoang, Valentin Peyron, Paul-Bogdan Jurcut, Quentin Esteban, Jan Kokla*
 
-## Usage
+In 2004, American entrepreneur Frans Johansson published the book
+*“The Medici Effect: Breakthrough Insights at the Intersection of
+Ideas, Concepts, and Cultures”* [[1](https://www.goodreads.com/pt/book/show/20482413)]. Quoted:
 
-You can use this theme with [Jekyll](http://jekyllrb.com/) or you can simply use it with [Github Pages](https://pages.github.com).
-For local usage just download [Jekyll](http://jekyllrb.com/), use installation guide for more. You can download latest Biscuit from [its Github repository](https://github.com/sblisesivdin/biscuit).
+> We have met teams and individuals who have searched for, and found, intersec- tions between disciplines, cultures,
+> concepts, and domains. Once there, they had the opportunity to innovate as never before, creating the Medici Effect.
 
-If you prefer to use Github Pages, you do not need to download it, upload files to a new repository...etc., just [fork](https://docs.github.com/en/get-starter/quickstart/fork-a-repo) and use it.
+In other words, by merging ideas from a range of diverse backgrounds,
+one can increase the likelihood of intellectual cross-pollination,
+which might lead to innovation and success.
 
-### Files
+Our aim is to examine if this holds true in the movie industry.
+We focus on the plots and genres and with the help of the embedding
+models we will generate the network graphs. These will help us to
+verify if the relationship between “being at the intersection”
+and the success are linked in the movie industry.
 
-* `_config.yml`            : Main configuration file.
-* `index.md`               : Website page (for now, this page).
-* `_includes/head.html`    : File to add custom code to `<head>` section.
-* `_includes/scripts.html` : File to add custom code before `</body>`. You can change footer at here.
-* `_sass` folder           : Related scss files can be found at this folder.
-* `css/main.csss`          : Main scss file.
-* `README.md`              : A simple readme file.
+## Analysis
 
-## Example tag usage
+### 2.1. Distributions
 
-## Header 1
-### Header 2
-#### Header 3
-**bold**
-*italic*
+{% include analysis/release_year_kde.html %}
 
-> blockquotes
+Considering the distribution of the histogram, we might shift out focus for the last 40 years since there's more
+available data.
 
-~~~python
-import os,time
-print ("Biscuit")
-~~~
+{% include analysis/scatter_jointplot.html %}
 
-## Licence and Author Information
-
-Biscuit is derived from currently deprecated theme [Solo](http://github.com/chibicode/solo). The development of Biscuit is maintained by [Sefer Bora Lisesivdin](https://lrgresearch.org/bora).
-
-Biscuit and the previous code where Biscuit is derived are distributed with [MIT license](https://github.com/sblisesivdin/biscuit/blob/gh-pages/LICENSE).
+As we can see, ratings are almost normally distributed. Additionally, higher spread in ratings also comes from the
+recent decades.
