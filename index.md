@@ -2,9 +2,9 @@
 layout: default
 ---
 
-![Banner](assets/biscuit.png)
+![Banner](assets/banner.jpg)
 
-# “Creative breakthroughs occur, when worlds collide”
+# Creative breakthroughs occur, when worlds collide
 
 *Thai-Nam Hoang, Valentin Peyron, Paul-Bogdan Jurcut, Quentin Esteban, Jan Kokla*
 
