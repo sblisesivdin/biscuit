@@ -10,45 +10,47 @@ layout: default
 
 In 2004, American entrepreneur Frans Johansson published the book
 *“The Medici Effect: Breakthrough Insights at the Intersection of
-Ideas, Concepts, and Cultures”* [[1](https://www.goodreads.com/pt/book/show/20482413)]. Quoted:
-
-> We have met teams and individuals who have searched for, and found, intersec- tions between disciplines, cultures,
-> concepts, and domains. Once there, they had the opportunity to innovate as never before, creating the Medici Effect.
-
+Ideas, Concepts, and Cultures”* [[1](https://www.goodreads.com/pt/book/show/20482413)]. 
 In other words, by merging ideas from a range of diverse backgrounds,
 one can increase the likelihood of intellectual cross-pollination,
 which might lead to innovation and success.
 
-Our aim is to examine if this holds true in the movie industry.
-We focus on the plots and genres and with the help of the embedding
-models we will generate the network graphs. These will help us to
-verify if the relationship between “being at the intersection”
-and the success are linked in the movie industry.
+## Theory
 
-## Analysis
+Before we can dive deep into the movies, let’s first think about the 
+concept of “being at the intersection” for a second. Most natural way 
+of looking at it is network graphs. With 2 simple examples, we will 
+introduce two centrality measures of graphs that we’re going to use 
+for quantifying it: **_degree_** and **_betweenness_**.
 
-### 2.1. Distributions
+### Betweenness
 
-{% include analysis/release_year_kde.html %}
+If you take a look at the graph below, you see that we have 2 bigger 
+clusters and one node that sits at the intersection of the clusters. 
+This is exactly what the Medici effect referred to! Visually it all looks 
+really simple to grasp right, but how can we quantify it? This is where 
+**betweenness** measure comes in.
 
-Considering the distribution of the histogram, we might shift out focus for the last 40 years since there's more
-available data.
+{% include theory/betweenness.html %}
 
-{% include analysis/scatter_jointplot.html %}
+If you take all pairs of nodes from the graph and find the shortest paths 
+between them, then betweenness centrality for a certain node is _the percentage 
+of these shortest paths that go through the node_. If you now once again 
+take a look at the graph above and focus on the colors of the nodes (you 
+can hover over the nodes to see the numerical betweenness measure), you see 
+that the lighter the color, the bigger the betweenness. We have 
+successfully quantified “being at the intersection” for clustered network graphs.
 
-As we can see, ratings are almost normally distributed. Additionally, higher spread in ratings also comes from the
-recent decades.
+### Degree
 
-### 2.2. Genre analysis
+What if we don’t have such clear clusters, but we rather have a big chunk of quite 
+similar movies and then some outliers as seen from the graph below? We don’t really 
+have nodes that act as bridges between clusters and sit at the intersections. In 
+that case, let’s redefine the Medici effect in the movie industry a bit and say 
+that the most successful movies will be _the ones that have taken ideas from many 
+other movies and thus are connected to the biggest possible number of other nodes_. 
+You might already have guessed… degree of the node is exactly what we need.
 
-As our work will highly depend on the genres, let's take a look which are the most common and/or most rated.
+{% include theory/degree.html %}
 
-{% include genre_ana/no_movie_genres.html %}
-
-It turns out the most of the movies have 1-5 genres, but there might be as many as 17.
-
-{% include genre_ana/no_movie_genres_bar.html %}
-
-{% include genre_ana/rating_by_genre.html %}
-
-As can be seen from the chart, there are no clear patterns regarding the rating and the genre, which is as expected.
+## What about movies though?
