@@ -1,12 +1,12 @@
 
 html {
-  font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 18px/1.5 'Lora', serif;
   -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 30rem) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -45,7 +45,7 @@ small {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0 0 0.5rem -0.1rem /* align left edge */
 ;
@@ -55,14 +55,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 3.2rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 @media (min-width: 30rem) {
   h1 {
-    font-size: 2.5rem;
+    text-align: left;
+    font-size: 3.2rem;
     margin-bottom: 3rem;
+    margin-top: 5rem;
   }
 }
 
@@ -72,21 +75,21 @@ h1 a {
 
 h2 {
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 30rem) {
   h2 {
     margin-top: 2.5rem;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 1.0rem;
   }
 }
 
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1.0rem;
 }
@@ -131,13 +134,17 @@ hr {
   top: -1px;
 }
 
+/*
 .container img, .container iframe {
   max-width: 100%;
 }
+*/
 
 .container img {
   margin: 0 auto;
   display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 table {
