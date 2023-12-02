@@ -35,6 +35,10 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+#footer {
+  margin-bottom: 1rem;
+}
+
 #footer a:hover, a:focus {
   text-decoration: underline;
 }
@@ -182,5 +186,6 @@ pre > code {
   margin: 0 auto;
   padding: 0 1rem;
   text-align: justify;
+  padding-bottom: 4rem;
 }
 
