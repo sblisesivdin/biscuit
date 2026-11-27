@@ -1,11 +1,13 @@
 ---
 layout: default
+title: Home
+show_recent_posts: true
 ---
 
-![Banner](assets/biscuit.png)
+![Biscuit]({{ '/assets/biscuit.png' | relative_url }})
 
 
-**[Biscuit](http://sblisesivdin.github.io/biscuit)** is a single-page responsive Jekyll theme. This is the simplest and still-good-looking Jekyll theme that you can find. 
+**[Biscuit](https://sblisesivdin.github.io/biscuit)** is a simple, responsive Jekyll theme for personal websites and blogs. Keep a single page, add a top menu, or publish Markdown posts with the same clean layout.
 
 ## Usage
 
@@ -20,8 +22,12 @@ If you prefer to use GitHub Pages, you do not need to download it, upload files 
 * `index.md`               : Website page (for now, this page).
 * `_includes/head.html`    : File to add custom code to `<head>` section.
 * `_includes/scripts.html` : File to add custom code before `</body>`. You can change footer at here.
+* `_includes/navigation.html` : Top menu, configured in `_config.yml`.
+* `_layouts/post.html`     : Blog post layout.
+* `_posts` folder          : Blog posts written in Markdown.
+* `blog/index.html`        : Blog archive, newest posts first.
 * `_sass` folder           : Related scss files can be found at this folder.
-* `css/main.csss`          : Main scss file.
+* `css/main.scss`          : Main scss file.
 * `README.md`              : A simple readme file.
 
 ## Example tag usage
