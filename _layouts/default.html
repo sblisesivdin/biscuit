@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' | escape }}">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="{{ site.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="css/main.css">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
 {% include head.html %}
 </head>
-<body>
-  <div class="container">
+<body{% if site.navigation.size > 0 %} class="has-navigation"{% endif %}>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  {% include navigation.html %}
+  <main id="main-content" class="container" tabindex="-1">
     {{ content }}
-  </div>
+    {% if page.show_recent_posts %}
+      {% include recent-posts.html %}
+    {% endif %}
+  </main>
 {% include scripts.html %}
 </body>
 </html>

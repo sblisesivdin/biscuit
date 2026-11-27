@@ -1,15 +1,40 @@
 # Site settings
 title: Biscuit Theme for Jekyll
 tag_text: Biscuit
-description: Biscuit is a single-page responsive Jekyll theme. This is the most simple and still-good-looking Jekyll theme that you can find.
-# baseurl: "/blog" # the subpath of your site, e.g. /blog
-# url: "https://example.com" # the base hostname & protocol for your site, e.g. http://example.com
+description: A simple, responsive Jekyll theme for personal websites and blogs.
+lang: en
+# For a user site or custom domain, set baseurl to "".
+baseurl: "/biscuit"
+url: "https://sblisesivdin.github.io"
+
+# Remove this list, or use navigation: [], for the original single-page layout.
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: GitHub
+    url: https://github.com/sblisesivdin/biscuit
+
+blog:
+  recent_posts: 3
+  date_format: "%b %-d, %Y"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav_section: /blog/
+      permalink: /blog/:title/
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-feed
 
 # Build settings
 markdown: kramdown
-exclude: ["README.md"]
+exclude: ["README.md", "Gemfile", "Gemfile.lock", "vendor"]
 sass:
   style: compressed

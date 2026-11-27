@@ -1,0 +1,9 @@
+{% assign recent_limit = site.blog.recent_posts | default: 3 %}
+{% if site.posts.size > 0 and recent_limit > 0 %}
+<section class="recent-posts" aria-labelledby="recent-posts-title">
+  <h2 id="recent-posts-title">Recent posts</h2>
+  {% assign recent_posts = site.posts | slice: 0, recent_limit %}
+  {% include post-list.html posts=recent_posts heading=3 %}
+  <p><a href="{{ '/blog/' | relative_url }}">All posts</a></p>
+</section>
+{% endif %}
