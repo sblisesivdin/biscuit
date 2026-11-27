@@ -1,12 +1,18 @@
 
+:root {
+  --bar-h: 56px;
+  --max: 80ch;
+  --g: 1rem;
+}
+
 html {
-  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   -webkit-font-smoothing: antialiased;
 }
 
 @media (min-width: 30rem) {
   html {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -45,7 +51,7 @@ small {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   -webkit-font-smoothing: antialiased;
   margin: 0 0 0.5rem -0.1rem /* align left edge */;
   line-height: 1;
@@ -150,13 +156,13 @@ td, th {
 }
 
 pre, code {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-family: inherit;
   background-color: #eee;
 }
 
 pre {
   padding: .5rem 1rem;
-  font-size: .875rem;
+  font-size: .8rem;
   overflow-x: auto;
   overflow-wrap: normal;
   white-space: pre;
@@ -170,9 +176,14 @@ pre > code {
   padding: 0;
 }
 
-.container {
-  max-width: 30rem;
+.container,
+.topbar-inner {
+  width: min(100% - 2 * var(--g), var(--max));
+  max-width: 40rem;
   margin: 0 auto;
+}
+
+.container {
   padding: 0 1rem;
   overflow-wrap: break-word;
 }
@@ -197,7 +208,7 @@ pre > code {
 
 @media (min-width: 30rem) and (min-height: 30rem) {
   .has-navigation :target {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: calc(var(--bar-h) + .5rem);
   }
 }
 
