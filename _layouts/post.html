@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% assign date_format = site.blog.date_format | default: '%b %-d, %Y' %}
+<article class="post">
+  <header class="post-header">
+    <h1>{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
+      {% if page.author %} · {{ page.author.name | default: page.author | escape }}{% endif %}
+      {% if page.last_modified_at %}
+      <br>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: date_format }}</time>
+      {% endif %}
+    </p>
+    {% if page.tags.size > 0 %}
+    <ul class="post-tags" aria-label="Tags">
+      {% for tag in page.tags %}<li>{{ tag | escape }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+  <div class="post-content">{{ content }}</div>
+</article>
+<nav class="post-navigation" aria-label="Post navigation">
+  {% if page.previous %}
+  <p><span>Previous post</span><a href="{{ page.previous.url | relative_url }}" rel="prev">{{ page.previous.title | escape }}</a></p>
+  {% endif %}
+  {% if page.next %}
+  <p><span>Next post</span><a href="{{ page.next.url | relative_url }}" rel="next">{{ page.next.title | escape }}</a></p>
+  {% endif %}
+  <p><a href="{{ '/blog/' | relative_url }}">Back to blog</a></p>
+</nav>

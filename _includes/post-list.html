@@ -1,0 +1,11 @@
+{% assign date_format = site.blog.date_format | default: '%b %-d, %Y' %}
+{% assign heading = include.heading | default: 2 %}
+<ul class="post-list">
+  {% for post in include.posts %}
+  <li class="post-list-item">
+    <h{{ heading }}><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h{{ heading }}>
+    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></p>
+    <div class="post-excerpt">{{ post.excerpt }}</div>
+  </li>
+  {% endfor %}
+</ul>

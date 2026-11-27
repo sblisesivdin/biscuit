@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+description: Notes on using and customizing Biscuit.
+permalink: /blog/
+---
+<header class="blog-header">
+  <h1>{{ page.title | escape }}</h1>
+  <p>{{ page.description | escape }}</p>
+  <p><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS/Atom</a></p>
+</header>
+{% if site.posts.size > 0 %}
+  {% include post-list.html posts=site.posts %}
+{% else %}
+  <p>No posts yet.</p>
+{% endif %}

@@ -1,0 +1,28 @@
+{% if site.navigation.size > 0 %}
+<nav class="topbar" aria-label="Main navigation">
+  <div class="topbar-inner">
+    {% assign current_url = page.url | replace: 'index.html', '' %}
+    {% for item in site.navigation %}
+      {% assign first_character = item.url | slice: 0, 1 %}
+      {% assign first_two = item.url | slice: 0, 2 %}
+      {% assign internal = false %}
+      {% if item.url contains ':' or first_two == '//' %}
+        {% assign destination = item.url %}
+      {% elsif first_character == '#' %}
+        {% assign destination = '/' | relative_url | append: item.url %}
+      {% else %}
+        {% assign internal = true %}
+        {% assign destination = item.url | relative_url %}
+      {% endif %}
+      {% assign item_url = item.url | replace: 'index.html', '' %}
+      {% assign active = false %}
+      {% if internal %}
+        {% if current_url == item_url or page.nav_section == item.url %}
+          {% assign active = true %}
+        {% endif %}
+      {% endif %}
+      <a href="{{ destination | escape }}"{% if active %} class="is-active" aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+    {% endfor %}
+  </div>
+</nav>
+{% endif %}

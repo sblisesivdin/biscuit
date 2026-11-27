@@ -1,6 +1,6 @@
 
 html {
-  font: 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -150,13 +150,16 @@ td, th {
 }
 
 pre, code {
-  font-family: inherit;
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
   background-color: #eee;
 }
 
 pre {
   padding: .5rem 1rem;
-  font-size: 0.8rem;
+  font-size: .875rem;
+  overflow-x: auto;
+  overflow-wrap: normal;
+  white-space: pre;
 }
 
 code {
@@ -171,5 +174,30 @@ pre > code {
   max-width: 30rem;
   margin: 0 auto;
   padding: 0 1rem;
+  overflow-wrap: break-word;
+}
+
+:focus-visible {
+  outline: 2px solid #0074d9;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -10rem;
+  z-index: 20;
+  padding: .5rem 1rem;
+  background: #fff;
+}
+
+.skip-link:focus {
+  top: .5rem;
+}
+
+@media (min-width: 30rem) and (min-height: 30rem) {
+  .has-navigation :target {
+    scroll-margin-top: 5rem;
+  }
 }
 
